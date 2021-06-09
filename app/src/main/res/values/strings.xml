@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">UniformShop</string>
+    <string name="buyButton_text">BUY</string>
+    <string name="sellButton_text">SELL</string>
+    <string name="app_heading">MRGS <br /> Uniform <br />Shop</string>
+    <string name="description_text">Extra <br /> Description   </string>
+    <string name="enterButton_text">Upload Listing</string>
+
+    <string-array name="condition_array">
+        <item>Select One</item>
+        <item>Brand New</item>
+        <item>Used - Like New</item>
+        <item>Used - Good</item>
+        <item>Used - Fair</item>
+    </string-array>
+
+    <string-array name="category_array">
+        <item>Select One</item>
+        <item>Girls 3/4 Sleeve Blouse</item>
+        <item>Girls Long Sleeve Blouse</item>
+        <item>Boys Short Sleeve Shirt</item>
+        <item>Boys Long Sleeve Shirt</item>
+        <item>Long Skirt</item>
+        <item>Short Skirt</item>
+        <item>Shorts</item>
+        <item>Trousers</item>
+        <item>Jumper</item>
+        <item>Jacket</item>
+    </string-array>
+
+    <string-array name="size_array">
+        <item>Select One</item>
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+        <item>XXL</item>
+        <item>4</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+
 </resources>

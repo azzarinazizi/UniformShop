@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363819561208",
+    "project_id": "fir-db1a1",
+    "storage_bucket": "fir-db1a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363819561208:android:aa2033490560b11d058b0d",
+        "android_client_info": {
+          "package_name": "com.azzarina.uniformshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363819561208-8fmr3q757pkt69bipo6v0tt5i38svh3d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmfBx-5gJpb-c-gGfRMtJF5GjwOMf54bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363819561208-8fmr3q757pkt69bipo6v0tt5i38svh3d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
