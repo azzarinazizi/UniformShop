@@ -7,6 +7,26 @@
     <string name="description_text">Extra <br /> Description   </string>
     <string name="enterButton_text">Upload Listing</string>
     <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="junior_uniform_hdg"><u><![CDATA[Junior Uniform (Year 9, 10 & 11)]]></u></string>
+    <string name="senior_uniform_hdg"><u><![CDATA[Senior Uniform (Year 12 & 13)]]></u></string>
+    <string name="skirt_desc">One of the two regulation styles: <br /> (a) Polyester/wool, navy mid length skirt. <br />(b) Polyester/wool, navy full length skirt.</string>
+    <string name="trousers_desc">Regulation polyester/wool, navy dress trousers. <i>Fitted and non-fitted available.</i></string>
+    <string name="jersey_desc">Regulation navy jersey with school crest.</string>
+    <string name="redjersey_desc">Regulation red jersey with school crest.</string>
+    <string name="shirt_desc">Regulation MRGS open-necked shirt with coloured school logo on pocket; long or short-sleeved (navy collar). <i>Fitted and non-fitted available.</i></string>
+    <string name="seniorshirt_desc">Regulation MRGS open-necked shirt with grey school logo on pocket; long or short-sleeved (grey collar). <i>Fitted and non-fitted available.</i></string>
+    <string name="tshirt_singlet_hdg"><b>T-shirt / singlet:</b><i>(optional)</i></string>
+    <string name="tshirtsinglet_desc">Must not be visible at the neck or beneath school shirt. No longsleeved garment may be worn under a short-sleeved shirt</string>
+    <string name="shoes_desc">Black leather, flat-heeled, full-foot (for reasons of safety), school shoes with backs.<i> High heeled, canvas, suede leather, high-soled (platform), ballet-type, backless shoes, boots, sandals, scuffs, jandals, slippers, track shoes or casual street brand shoes such as Nike, Chuck Taylors or Vans may NOT be worn.</i></string>
+    <string name="socks_desc">MRGS regulation knee high socks, short black socks, or black tights. <i>No logos or brandings.</i></string>
+    <string name="jacket_desc">Regulation MRGS jacket. <i>Only the regulation MRGS jacket may be worn.</i></string>
+    <string name="PEshirt_desc">Regulation MRGS shirt.</string>
+    <string name="PEshorts_desc">Regulation MRGS shorts.</string>
+    <string name="blazer_hdg"><b>Blazer</b> <i>(optional)</i></string>
+    <string name="blazer_desc">Regulation MRGS navy blazer with school crest</string>
+    <string name="ties_hdg"><b>Ties</b> <i>(optional)</i></string>
+    <string name="tie_desc">Regulation MRGS tie</string>
+
 
     <string-array name="condition_array">
         <item>Select One</item>

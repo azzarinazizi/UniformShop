@@ -6,42 +6,584 @@
     android:layout_height="match_parent"
     tools:context=".uniformGuide">
 
-    <TextView
-        android:id="@+id/UGheading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="28dp"
-        android:text="@string/uniformGuide"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="374dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/UGheading"
-        app:layout_constraintVertical_bias="0.0">
-
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        tools:layout_editor_absoluteX="19dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
             <TextView
-                android:id="@+id/U"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/junior_uniform_hdg" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Shorts:"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:text="Regulation polyester/wool, navy shorts. " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Skirt:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skirt_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Trousers:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trousers_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Jersey:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jersey_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Shirt:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shirt_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="@string/tshirt_singlet_hdg" />
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tshirtsinglet_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Shoes:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/shoes_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Socks / Tights:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/socks_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="Jacket:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jacket_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="PE Shirt:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/PEshirt_desc" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCBCB"
+                    android:text="PE Shorts:"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:paddingVertical="5dp"
+                    android:paddingLeft="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/PEshorts_desc" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/description"
-                android:textSize="50sp"/>
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/senior_uniform_hdg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Shorts:"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:text="Regulation polyester/wool, navy shorts. " />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Skirt:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/skirt_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Trousers:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/trousers_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Jersey:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/redjersey_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Shirt:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seniorshirt_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="@string/tshirt_singlet_hdg" />
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tshirtsinglet_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Shoes:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shoes_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Socks / Tights:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/socks_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="Jacket:"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jacket_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="@string/blazer_hdg" />
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/blazer_desc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_height="match_parent"
+                        android:background="#CCCBCB"
+                        android:text="@string/ties_hdg" />
+
+                    <TextView
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/tie_desc" />
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
+
+
     </ScrollView>
 
 
