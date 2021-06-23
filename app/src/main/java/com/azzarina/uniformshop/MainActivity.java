@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 .getIdentifier("android:id/search_src_text", null, null);
         TextView textView = (TextView) searchView.findViewById(id);
         textView.setHintTextColor(Color.WHITE);
+        textView.setTextColor(Color.WHITE);
     }
 
     public void sendMessage(View aView) {

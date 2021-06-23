@@ -95,7 +95,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/roundedcorner"
+        android:background="@drawable/roundedcorner3"
         android:iconifiedByDefault="false"
         android:queryHint="@string/searchbar_hint"
         app:iconifiedByDefault="false"

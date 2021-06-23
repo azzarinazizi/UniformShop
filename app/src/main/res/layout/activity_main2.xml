@@ -6,96 +6,212 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-
-    <TableLayout
-        android:id="@+id/tableLayout2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:stretchColumns="1,1,2"
-        app:layout_constraintBottom_toTopOf="@id/table1"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
 
             <TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Level            " />
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Level"
+                android:textStyle="bold" />
 
             <RadioButton
                 android:id="@+id/radio_senior"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingHorizontal="3dp"
                 android:text="Senior" />
 
             <RadioButton
                 android:id="@+id/radio_junior"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:paddingHorizontal="3dp"
                 android:text="Junior" />
-        </TableRow>
-    </TableLayout>
 
-    <TableLayout
-        android:id="@+id/table1"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="239dp"
-        android:stretchColumns="1"
-        app:layout_constraintBottom_toTopOf="@+id/enterButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tableLayout2">
+        </LinearLayout>
 
-        <TableRow>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
 
             <TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Category" />
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Category"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/category_spinner"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
                 android:entries="@array/category_array"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp" />
-        </TableRow>
+                android:paddingHorizontal="15dp" />
 
-        <TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
 
             <TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Size" />
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Size"
+                android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/size_spinner"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
                 android:entries="@array/size_array"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp" />
-        </TableRow>
+                android:paddingHorizontal="15dp" />
 
-        <TableRow>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
             <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Condition"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/condition_spinner"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/condition_array"
+                android:paddingHorizontal="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Set Price"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/setPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ems="8"
+                android:hint="$"
+                android:inputType="number"
+                android:paddingHorizontal="9dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:text="@string/description_text"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/extraDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:ems="13"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="9dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/btnSelectImage"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/roundedcorner2"
+                android:fontFamily="@font/msyi"
+                android:text="UPLOAD IMAGE"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+            <!--<TextView
                 android:paddingLeft="8dp"
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
@@ -116,7 +232,7 @@
                 android:paddingTop="8dp"
                 android:paddingBottom="8dp"
                 android:text="Set Price" />
-            />
+
 
             <EditText
                 android:id="@+id/setPrice"
@@ -160,6 +276,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
+&ndash;&gt;-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 
