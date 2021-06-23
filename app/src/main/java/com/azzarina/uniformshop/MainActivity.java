@@ -1,13 +1,18 @@
 package com.azzarina.uniformshop;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.MenuItemCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
         ImageView bg_slidehshow = findViewById(R.id.bg_slideshow);
         AnimationDrawable animationDrawable = (AnimationDrawable) bg_slidehshow.getDrawable();
         animationDrawable.start();
+
+
+        SearchView searchView= (SearchView) findViewById(R.id.searchbar);
+        int id = searchView.getContext()
+                .getResources()
+                .getIdentifier("android:id/search_src_text", null, null);
+        TextView textView = (TextView) searchView.findViewById(id);
+        textView.setHintTextColor(Color.WHITE);
     }
 
     public void sendMessage(View aView) {

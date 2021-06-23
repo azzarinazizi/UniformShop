@@ -2,14 +2,14 @@
     <string name="app_name">UniformShop</string>
     <string name="buyButton_text">BUY</string>
     <string name="sellButton_text">SELL</string>
-    <string name="uniformGuide"><u>Uniform Guide</u></string>
+    <string name="uniformGuide">Uniform Guide</string>
     <string name="app_heading">MRGS <br /> Uniform <br />Shop</string>
     <string name="description_text">Extra <br /> Description   </string>
     <string name="enterButton_text">Upload Listing</string>
     <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
     <string name="junior_uniform_hdg"><u><![CDATA[Junior Uniform (Year 9, 10 & 11)]]></u></string>
     <string name="senior_uniform_hdg"><u><![CDATA[Senior Uniform (Year 12 & 13)]]></u></string>
-    <string name="skirt_desc">One of the two regulation styles: <br /> (a) Polyester/wool, navy mid length skirt. <br />(b) Polyester/wool, navy full length skirt.</string>
+    <string name="skirt_desc">One of the two regulation styles:<br />(a) Polyester/wool, navy mid length skirt.<br />(b) Polyester/wool, navy full length skirt.</string>
     <string name="trousers_desc">Regulation polyester/wool, navy dress trousers. <i>Fitted and non-fitted available.</i></string>
     <string name="jersey_desc">Regulation navy jersey with school crest.</string>
     <string name="redjersey_desc">Regulation red jersey with school crest.</string>
@@ -26,6 +26,7 @@
     <string name="blazer_desc">Regulation MRGS navy blazer with school crest</string>
     <string name="ties_hdg"><b>Ties</b> <i>(optional)</i></string>
     <string name="tie_desc">Regulation MRGS tie</string>
+    <string name="searchbar_hint">Search MRGS Uniform</string>
 
 
     <string-array name="condition_array">
