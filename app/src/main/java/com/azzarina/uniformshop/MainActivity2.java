@@ -21,15 +21,22 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener{
- Spinner spinner;
- Button btnSelectImage;
- ImageView imgView;
- static final int SELECT_IMAGE = 1000;
+public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+    Spinner spinner;
+    Button btnSelectImage;
+    ImageView imgView;
+    RadioGroup radioGroup;
+    RadioButton radioButton;
+    TextView textView;
 
- public static final String EXTRA_MESSAGE = "Description Entry";
+    static final int SELECT_IMAGE = 1000;
+    public static final String EXTRA_MESSAGE = "Set Price";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +44,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main2);
 
         spinner = (Spinner) findViewById(R.id.category_spinner);
-//        Button enterButton = (Button) findViewById(R.id.enterButton);
-//        enterButton.setTransformationMethod(null);
+//
 
         btnSelectImage = findViewById(R.id.btnSelectImage);
         imgView = findViewById(R.id.imgView);
@@ -46,16 +52,18 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         btnSelectImage.setOnClickListener(this);
 
         handlePermission();
-
     }
 
-    public void sendMessage (View aView) {
-        Intent intent = new Intent(this,MainActivity3.class);
-        EditText editText = (EditText) findViewById(R.id.extraDescription);
+
+
+    public void listing_overview (View aView) {
+        Intent intent = new Intent(this,listing_overview.class);
+        EditText editText = (EditText) findViewById(R.id.setPrice);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
-}
+    }
+
 
     void handlePermission(){
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M){

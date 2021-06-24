@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,10 +24,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,6 +42,12 @@
                 android:text="Level"
                 android:textStyle="bold" />
 
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
             <RadioButton
                 android:id="@+id/radio_senior"
                 android:layout_width="wrap_content"
@@ -49,6 +63,8 @@
                 android:layout_marginLeft="15dp"
                 android:paddingHorizontal="3dp"
                 android:text="Junior" />
+
+            </RadioGroup>
 
         </LinearLayout>
 
@@ -150,6 +166,7 @@
                 android:ems="8"
                 android:hint="$"
                 android:inputType="number"
+                android:text="@string/price_set"
                 android:paddingHorizontal="9dp" />
 
         </LinearLayout>
@@ -182,8 +199,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="115dp"
             android:layout_marginTop="10dp"
+            android:background="@drawable/borderblack"
             android:orientation="vertical">
 
             <ImageView
@@ -191,91 +209,91 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <Button
                 android:id="@+id/btnSelectImage"
                 android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:fontFamily="@font/msyi"
+                android:text="UPLOAD IMAGE"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                app:backgroundTint="#D7D7DB" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/borderblack">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="7dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/contactinstruction" />
+
+            <EditText
+                android:id="@+id/EmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Email"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="15dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Phone"
+                android:ems="10"
+                android:inputType="phone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/uploadListing"
+                android:onClick="listing_overview"
+                android:layout_width="180dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:layout_gravity="center"
                 android:background="@drawable/roundedcorner2"
                 android:fontFamily="@font/msyi"
-                android:text="UPLOAD IMAGE"
+                android:text="UPLOAD LISTING"
                 android:textColor="#FFFFFF"
                 android:textSize="15dp"
                 app:backgroundTint="@null" />
         </LinearLayout>
 
+
     </LinearLayout>
 
+    </ScrollView>
 
-            <!--<TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Condition" />
-
-            <Spinner
-                android:id="@+id/condition_spinner"
-                android:entries="@array/condition_array"
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="Set Price" />
-
-
-            <EditText
-                android:id="@+id/setPrice"
-                android:ems="10"
-                android:hint="$"
-                android:inputType="number"
-                android:paddingLeft="8dp"
-                android:paddingBottom="8dp" />
-
-
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:paddingLeft="8dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:text="@string/description_text" />
-
-            <EditText
-                android:id="@+id/extraDescription"
-                android:ems="10"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:paddingLeft="8dp"
-                android:paddingBottom="8dp" />
-
-
-        </TableRow>
-    </TableLayout>
-
-    <Button
-        android:id="@+id/enterButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
-
-        android:onClick="sendMessage"
-        android:text="@string/enterButton_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-&ndash;&gt;-->
 </androidx.constraintlayout.widget.ConstraintLayout>
 

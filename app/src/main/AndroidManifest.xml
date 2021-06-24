@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.azzarina.uniformshop">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniformShop">
-        <activity android:name=".uniformGuide"></activity>
+        <activity android:name=".listing_overview"></activity>
+        <activity android:name=".uniformGuide" />
         <activity android:name=".buy001" />
         <activity
             android:name=".MainActivity3"
