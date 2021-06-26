@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uniformGuide">
+    tools:context=".uniformGuide"
+    android:background="#DBDBD5">
 
 
     <ScrollView
@@ -33,6 +34,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/antic"
+                    android:textSize="25dp"
                     android:text="@string/junior_uniform_hdg" />
             </LinearLayout>
 
@@ -51,7 +55,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shorts:"
@@ -60,6 +66,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Regulation polyester/wool, navy shorts. " />
@@ -75,7 +82,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Skirt:"
@@ -84,6 +93,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/skirt_desc" />
@@ -99,7 +109,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Trousers:"
@@ -108,6 +120,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/trousers_desc" />
@@ -123,7 +136,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Jersey:"
@@ -132,6 +147,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/jersey_desc" />
@@ -147,7 +163,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shirt:"
@@ -156,6 +174,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/shirt_desc" />
@@ -171,14 +190,17 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/tshirt_singlet_hdg" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/tshirtsinglet_desc" />
@@ -194,7 +216,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shoes:"
@@ -203,6 +227,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/shoes_desc" />
@@ -218,7 +243,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Socks / Tights:"
@@ -226,7 +253,8 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/socks_desc" />
@@ -242,7 +270,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Jacket:"
@@ -251,6 +281,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/jacket_desc" />
@@ -266,7 +297,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="PE Shirt:"
@@ -275,6 +308,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/PEshirt_desc" />
@@ -290,7 +324,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="PE Shorts:"
@@ -299,6 +335,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/PEshorts_desc" />
@@ -316,6 +353,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/antic"
+                    android:textSize="25dp"
                     android:text="@string/senior_uniform_hdg" />
             </LinearLayout>
 
@@ -333,7 +373,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shorts:"
@@ -342,6 +384,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Regulation polyester/wool, navy shorts. " />
@@ -357,7 +400,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Skirt:"
@@ -366,6 +411,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/skirt_desc" />
@@ -381,7 +427,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Trousers:"
@@ -390,6 +438,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/trousers_desc" />
@@ -405,7 +454,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Jersey:"
@@ -414,6 +465,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/redjersey_desc" />
@@ -429,7 +481,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shirt:"
@@ -438,6 +492,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/seniorshirt_desc" />
@@ -453,14 +508,17 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/tshirt_singlet_hdg" />
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/tshirtsinglet_desc" />
@@ -476,7 +534,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Shoes:"
@@ -485,6 +545,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/shoes_desc" />
@@ -500,7 +561,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Socks / Tights:"
@@ -509,6 +572,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/socks_desc" />
@@ -524,7 +588,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="Jacket:"
@@ -533,6 +599,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/jacket_desc" />
@@ -548,7 +615,9 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/blazer_hdg" />
@@ -556,6 +625,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/blazer_desc" />
@@ -565,13 +635,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#CCCBCB"
+                        android:background="#1C3D5D"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
                         android:text="@string/ties_hdg" />
@@ -579,8 +652,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
+                        android:paddingBottom="20dp"
                         android:text="@string/tie_desc" />
                 </LinearLayout>
 
