@@ -28,8 +28,11 @@
     <string name="tie_desc">Regulation MRGS tie</string>
     <string name="searchbar_hint">Search MRGS Uniform</string>
     <string name="price_set" />
-    <string name="successful_listing">Your listing was successful !</string>
+    <string name="successful_listing">Your listing was successful!</string>
     <string name="contactinstruction"><b>Your contact information:</b><br /><i>This information will be public for interested buyers to contact you regarding this listing</i></string>
+    <string name="chked">checked</string>
+    <string name="return_home">Return to home</string>
+    <string name="sellerscontactinfo"><u>Sellers contact information:</u></string>
 
 
     <string-array name="condition_array">

@@ -4,6 +4,11 @@
         <item>@font/antic</item>
         <item>@font/cairo_extralight</item>
         <item>@font/montserrat</item>
+        <item>@font/nunito</item>
+        <item>@font/nunito_italic</item>
         <item>@font/nunito_sans_extralight</item>
+        <item>@font/nunito_semibold</item>
+        <item>@font/nunito_semibold_italic</item>
+        <item>@font/playfair_display</item>
     </array>
 </resources>

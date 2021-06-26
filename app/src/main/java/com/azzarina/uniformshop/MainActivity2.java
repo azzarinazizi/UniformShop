@@ -12,9 +12,11 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -26,13 +28,17 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+
     Spinner spinner;
     Button btnSelectImage;
     ImageView imgView;
     RadioGroup radioGroup;
     RadioButton radioButton;
     TextView textView;
+    String filePathString = null;
 
     static final int SELECT_IMAGE = 1000;
     public static final String EXTRA_MESSAGE = "Set Price";
@@ -44,11 +50,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_main2);
 
         spinner = (Spinner) findViewById(R.id.category_spinner);
-//
-
         btnSelectImage = findViewById(R.id.btnSelectImage);
         imgView = findViewById(R.id.imgView);
-
         btnSelectImage.setOnClickListener(this);
 
         handlePermission();
@@ -57,12 +60,39 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
 
     public void listing_overview (View aView) {
-        Intent intent = new Intent(this,listing_overview.class);
-        EditText editText = (EditText) findViewById(R.id.setPrice);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+
+        EditText et_price = (EditText) findViewById(R.id.setPrice);
+        EditText et_description = (EditText) findViewById(R.id.extraDescription);
+        RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup);
+        Spinner sp_category = (Spinner) findViewById(R.id.category_spinner);
+        Spinner sp_size = (Spinner) findViewById(R.id.size_spinner);
+        Spinner sp_condition = (Spinner) findViewById(R.id.condition_spinner);
+        EditText et_email = (EditText) findViewById(R.id.EmailAddress);
+        EditText et_phone = (EditText) findViewById(R.id.editTextPhone);
+
+        String price = et_price.getText().toString();
+        String description = et_description.getText().toString();
+        String checked = ((RadioButton)findViewById(rg.getCheckedRadioButtonId() )).getText().toString();
+        String category = sp_category.getSelectedItem().toString();
+        String size = sp_size.getSelectedItem().toString();
+        String condition = sp_condition.getSelectedItem().toString();
+        String email = et_email.getText().toString();
+        String phone = et_phone.getText().toString();
+
+        Intent i = new Intent(this, listing_overview.class);
+        i.putExtra("price",price);
+        i.putExtra("description", description);
+        i.putExtra("checked", checked);
+        i.putExtra("category", category);
+        i.putExtra("size", size);
+        i.putExtra("condition", condition);
+        i.putExtra("email", email);
+        i.putExtra("phone", phone);
+
+        startActivity(i);
+
     }
+
 
 
     void handlePermission(){
@@ -165,4 +195,6 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         openImageChooser();
 
     }
+
+
 }

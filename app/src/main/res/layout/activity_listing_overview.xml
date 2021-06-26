@@ -4,30 +4,244 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listing_overview">
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="$TextView"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="215dp" />
+    tools:context=".listing_overview"
+    android:background="#DBDBD5">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nunito"
         android:text="@string/successful_listing"
-        android:textSize="27dp"
-        tools:layout_editor_absoluteX="34dp"
-        tools:layout_editor_absoluteY="46dp" />
+        android:textSize="28dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/listingHdg"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="137dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/borderblack"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/listing_hdg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:fontFamily="@font/nunito"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:fontFamily="@font/nunito"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Price"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:fontFamily="@font/nunito"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="Condition"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:background="#CCCBCB"
+                android:fontFamily="@font/nunito"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="@string/description_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/extradesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"
+                android:text="@string/sellerscontactinfo"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:paddingHorizontal="15dp"
+                android:text="Email: "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:fontFamily="@font/nunito_italic"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="15dp"
+                android:text="Phone: "
+                android:fontFamily="@font/nunito"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:fontFamily="@font/nunito_italic"
+                tools:layout_editor_absoluteX="77dp"
+                tools:layout_editor_absoluteY="215dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/roundedcorner2"
+        android:fontFamily="@font/msyi"
+        android:onClick="home"
+        android:text="@string/return_home"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView bg_slidehshow = findViewById(R.id.bg_slideshow);
-        AnimationDrawable animationDrawable = (AnimationDrawable) bg_slidehshow.getDrawable();
+        ImageView bg_slideshow = findViewById(R.id.bg_slideshow);
+        AnimationDrawable animationDrawable = (AnimationDrawable) bg_slideshow.getDrawable();
         animationDrawable.start();
 
 
