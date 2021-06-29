@@ -28,12 +28,20 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductsList extends AppCompatActivity{
+public class ProductsList extends AppCompatActivity implements Adapter.OnItemClickListener {
+
+    public static final String EXTRA_IMAGE = "imageURL";
+    public static final String EXTRA_TITLE = "name";
+    public static final String EXTRA_PRICE = "price";
+    public static final String EXTRA_SIZE = "size";
+    public static final String EXTRA_DESC = "description";
+    public static final String EXTRA_EMAIL = "email";
+    public static final String EXTRA_PHONE = "phone";
 
     RecyclerView recyclerView;
     List<Product> products;
 
-    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/de58252ac41bf1521ace5095730941f2/raw/0e55574773128c3bb0f3f034d1e5c69ab3fe761a/gistfile1.txt";
+    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/3fff562d066a5936853334a401d0c437/raw/7e8eae5a7a4dedd3f18c53e45246558e7b3e0bbf/products";
     Adapter adapter;
 
     @Override
@@ -61,6 +69,9 @@ public class ProductsList extends AppCompatActivity{
                         product.setTitle(productObject.getString("name").toString());
                         product.setPrice(productObject.getString("price").toString());
                         product.setSize(productObject.getString("size").toString());
+                        product.setDescription(productObject.getString("description").toString());
+                        product.setEmail(productObject.getString("email").toString());
+                        product.setPhone(productObject.getString("phone").toString());
                         product.setCoverImage(productObject.getString("imageURL").toString());
 
                         products.add(product);
@@ -74,6 +85,7 @@ public class ProductsList extends AppCompatActivity{
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 adapter = new Adapter(getApplicationContext(), products);
                 recyclerView.setAdapter(adapter);
+                adapter.setOnItemClickListener(ProductsList.this);
             }
         }, new Response.ErrorListener() {
             @Override
@@ -106,5 +118,21 @@ public class ProductsList extends AppCompatActivity{
             }
         });
         return true;
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent detailIntent = new Intent(this, OpenProduct.class);
+        Product clickedItem = products.get(position);
+
+        detailIntent.putExtra(EXTRA_IMAGE,clickedItem.getCoverImage());
+        detailIntent.putExtra(EXTRA_TITLE,clickedItem.getTitle());
+        detailIntent.putExtra(EXTRA_PRICE,clickedItem.getPrice());
+        detailIntent.putExtra(EXTRA_SIZE,clickedItem.getSize());
+        detailIntent.putExtra(EXTRA_DESC,clickedItem.getDescription());
+        detailIntent.putExtra(EXTRA_EMAIL,clickedItem.getEmail());
+        detailIntent.putExtra(EXTRA_PHONE,clickedItem.getPhone());
+
+        startActivity(detailIntent);
     }
 }
