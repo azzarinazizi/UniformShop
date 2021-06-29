@@ -1,11 +1,18 @@
 package com.azzarina.uniformshop;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.SearchView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -21,12 +28,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductsList extends AppCompatActivity {
+public class ProductsList extends AppCompatActivity{
 
     RecyclerView recyclerView;
     List<Product> products;
 
-    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/de58252ac41bf1521ace5095730941f2/raw/7b62c6acf40a1038975ed140cd9c0f566ac7400f/gistfile1.txt";
+    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/de58252ac41bf1521ace5095730941f2/raw/0e55574773128c3bb0f3f034d1e5c69ab3fe761a/gistfile1.txt";
     Adapter adapter;
 
     @Override
@@ -38,6 +45,7 @@ public class ProductsList extends AppCompatActivity {
         products = new ArrayList<>();
 
         extractProducts();
+
     }
 
     private void extractProducts() {
@@ -76,5 +84,27 @@ public class ProductsList extends AppCompatActivity {
 
         queue.add(jsonArrayRequest);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.product_menu,menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        return true;
     }
 }

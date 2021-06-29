@@ -2,10 +2,12 @@
 
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/cardView"
     android:layout_height="wrap_content"
     android:layout_margin="1dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="4dp"
+    app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,11 +27,13 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/coverImage"
-            android:text="Id"
+            android:fontFamily="@font/nunito"
+            android:text="Product Title"
             android:textColor="#000"
-            android:textSize="15sp" />
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/productPrice"
@@ -38,10 +42,11 @@
             android:layout_below="@+id/productTitle"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito"
             android:layout_toEndOf="@+id/coverImage"
             android:layout_toRightOf="@+id/coverImage"
-            android:text="Iddddd2"
+            android:text="Price"
             android:textColor="#000"
             android:textSize="15sp" />
 
@@ -52,13 +57,13 @@
             android:layout_below="@+id/productPrice"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/nunito"
             android:layout_toEndOf="@+id/coverImage"
             android:layout_toRightOf="@+id/coverImage"
-            android:text="Iddddd2"
+            android:text="Size"
             android:textColor="#000"
             android:textSize="15sp" />
-
 
 
     </RelativeLayout>

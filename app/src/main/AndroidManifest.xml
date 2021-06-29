@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniformShop">
-        <activity android:name=".ProductsList"></activity>
+        <activity android:name=".OpenProduct"></activity>
+        <activity android:name=".ProductsList" />
         <activity android:name=".listing_overview" />
         <activity android:name=".uniformGuide" />
         <activity

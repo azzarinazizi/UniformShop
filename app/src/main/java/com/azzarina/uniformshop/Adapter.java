@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,15 +16,18 @@ import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements Filterable {
     LayoutInflater inflater;
     List<Product> products;
+    List<Product>  productsFull;
 
     public Adapter (Context ctx, List<Product> products){
         this.inflater = LayoutInflater.from(ctx);
         this.products = products;
+        productsFull = new ArrayList<>(products);
         }
 
 
@@ -63,4 +68,43 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         }
     }
+
+    @Override
+    public Filter getFilter(){
+        return productFilter;
+    }
+
+    private Filter productFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            List<Product> filteredList = new ArrayList<>();
+
+            if(constraint == null || constraint.length()== 0){
+                filteredList.addAll(productsFull);
+
+            }else{
+                String filterPattern = constraint.toString().toLowerCase().trim();
+
+                for(Product product : productsFull){
+                    if (product.getTitle().toLowerCase().contains(filterPattern)){
+                        filteredList.add(product);
+                    }
+                }
+            }
+
+            FilterResults results = new FilterResults();
+            results.values = filteredList;
+
+            return results;
+
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            products.clear();
+            products.addAll((List)results.values);
+            notifyDataSetChanged();
+        }
+    };
+
 }
