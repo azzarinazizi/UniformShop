@@ -3,6 +3,7 @@
     package="com.azzarina.uniformshop">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,17 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniformShop">
-        <activity android:name=".listing_overview"></activity>
+        <activity android:name=".ProductsList"></activity>
+        <activity android:name=".listing_overview" />
         <activity android:name=".uniformGuide" />
-        <activity android:name=".buy001" />
         <activity
             android:name=".MainActivity3"
-            android:parentActivityName=".MainActivity2">
+            android:parentActivityName=".SellingPage">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity2" />
+                android:value=".SellingPage" />
         </activity>
-        <activity android:name=".MainActivity2" />
+        <activity android:name=".SellingPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

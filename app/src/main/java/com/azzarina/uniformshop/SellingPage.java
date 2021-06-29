@@ -12,14 +12,11 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.provider.Settings;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -28,9 +25,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import java.io.IOException;
-
-public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
+public class SellingPage extends AppCompatActivity implements View.OnClickListener {
 
     Spinner spinner;
     Button btnSelectImage;
@@ -47,7 +42,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.selling_page);
 
         spinner = (Spinner) findViewById(R.id.category_spinner);
         btnSelectImage = findViewById(R.id.btnSelectImage);

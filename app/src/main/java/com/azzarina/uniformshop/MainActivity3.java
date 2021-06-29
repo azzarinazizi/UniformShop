@@ -14,7 +14,7 @@ public class MainActivity3 extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         Intent intent = getIntent();
-        String message = intent.getStringExtra(MainActivity2.EXTRA_MESSAGE);
+        String message = intent.getStringExtra(SellingPage.EXTRA_MESSAGE);
         TextView textMsg = (TextView)findViewById(R.id.message);
         textMsg.setText(message);
     }
