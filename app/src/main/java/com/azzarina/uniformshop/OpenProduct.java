@@ -46,7 +46,7 @@ public class OpenProduct extends AppCompatActivity {
 
         Picasso.get().load(coverImage).fit().centerInside().into(imageView);
         tv_title.setText(productTitle);
-        tv_price.setText(productPrice);
+        tv_price.setText("$" + productPrice);
         tv_size.setText("Size " + productSize);
         tv_desc.setText(productDesc);
 

@@ -2,6 +2,7 @@ package com.azzarina.uniformshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,7 +42,7 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
     RecyclerView recyclerView;
     List<Product> products;
 
-    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/3fff562d066a5936853334a401d0c437/raw/7e8eae5a7a4dedd3f18c53e45246558e7b3e0bbf/products";
+    private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/3fff562d066a5936853334a401d0c437/raw/7a7527b5f86a11c445e4eda7e6df48475ba51a81/products";
     Adapter adapter;
 
     @Override
@@ -82,7 +83,8 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
 
                 }
 
-                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                /*recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));*/
+                recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
                 adapter = new Adapter(getApplicationContext(), products);
                 recyclerView.setAdapter(adapter);
                 adapter.setOnItemClickListener(ProductsList.this);
