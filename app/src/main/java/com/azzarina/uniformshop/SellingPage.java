@@ -39,6 +39,8 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
     public static final String EXTRA_MESSAGE = "Set Price";
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +52,17 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         btnSelectImage.setOnClickListener(this);
 
         handlePermission();
+
     }
 
 
 
     public void listing_overview (View aView) {
 
+        Intent i = new Intent(this,listing_overview.class);
+
         EditText et_price = (EditText) findViewById(R.id.setPrice);
-        EditText et_description = (EditText) findViewById(R.id.extraDescription);
+        EditText et_desc = (EditText) findViewById(R.id.extraDescription);
         RadioGroup rg = (RadioGroup) findViewById(R.id.radioGroup);
         Spinner sp_category = (Spinner) findViewById(R.id.category_spinner);
         Spinner sp_size = (Spinner) findViewById(R.id.size_spinner);
@@ -66,7 +71,7 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         EditText et_phone = (EditText) findViewById(R.id.editTextPhone);
 
         String price = et_price.getText().toString();
-        String description = et_description.getText().toString();
+        String desc = et_desc.getText().toString();
         String checked = ((RadioButton)findViewById(rg.getCheckedRadioButtonId() )).getText().toString();
         String category = sp_category.getSelectedItem().toString();
         String size = sp_size.getSelectedItem().toString();
@@ -74,9 +79,8 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         String email = et_email.getText().toString();
         String phone = et_phone.getText().toString();
 
-        Intent i = new Intent(this, listing_overview.class);
-        i.putExtra("price",price);
-        i.putExtra("description", description);
+        i.putExtra("price", price);
+        i.putExtra("description", desc);
         i.putExtra("checked", checked);
         i.putExtra("category", category);
         i.putExtra("size", size);
@@ -169,6 +173,7 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
             public void run() {
                 if(resultCode == RESULT_OK){
                     if(requestCode == SELECT_IMAGE){
+                        assert data != null;
                         final Uri selectedImageUri = data.getData();
                         if(null != selectedImageUri){
                             imgView.post(new Runnable() {
@@ -190,6 +195,7 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         openImageChooser();
 
     }
+
 
 
 }

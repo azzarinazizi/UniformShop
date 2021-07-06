@@ -299,7 +299,8 @@
                 android:text="UPLOAD LISTING"
                 android:textColor="#FFFFFF"
                 android:textSize="15dp"
-                app:backgroundTint="@null" />
+                app:backgroundTint="@null"/>
+
         </LinearLayout>
 
 

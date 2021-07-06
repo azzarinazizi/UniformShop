@@ -27,6 +27,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ProductsList extends AppCompatActivity implements Adapter.OnItemClickListener {
@@ -83,8 +84,7 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
 
                 }
 
-                /*recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));*/
-                recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(), 2));
+                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 adapter = new Adapter(getApplicationContext(), products);
                 recyclerView.setAdapter(adapter);
                 adapter.setOnItemClickListener(ProductsList.this);
@@ -99,6 +99,7 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
         queue.add(jsonArrayRequest);
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

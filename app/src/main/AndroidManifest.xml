@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.azzarina.uniformshop">
 
+    <!-- Permission to access gallery when uploading image to sell !-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Permission to access internet when importing JSON URL !-->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniformShop">
-        <activity android:name=".OpenProduct"></activity>
+        <activity android:name=".CheckoutPage"></activity>
+        <activity android:name=".OpenProduct" />
         <activity android:name=".ProductsList" />
         <activity android:name=".listing_overview" />
         <activity android:name=".uniformGuide" />

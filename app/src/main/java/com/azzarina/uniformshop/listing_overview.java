@@ -2,10 +2,13 @@ package com.azzarina.uniformshop;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import static java.lang.String.format;
 
 public class listing_overview extends AppCompatActivity {
 
@@ -18,6 +21,7 @@ public class listing_overview extends AppCompatActivity {
     String email;
     String phone;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +45,9 @@ public class listing_overview extends AppCompatActivity {
         TextView tv_email = (TextView) findViewById(R.id.email);
         TextView tv_phone = (TextView) findViewById(R.id.phone);
 
-        tv_price.setText(String.format("$%s", price));
+        tv_price.setText(format("$%s", price));
         tv_description.setText(description);
-        tv_listinghdg.setText(String.format(checked + " " + category));
+        tv_listinghdg.setText(String.format("%s %s", checked, category));
         tv_size.setText(size);
         tv_condition.setText(condition);
         tv_email.setText(email);

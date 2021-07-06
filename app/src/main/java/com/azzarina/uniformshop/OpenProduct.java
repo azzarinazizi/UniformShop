@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,5 +56,10 @@ public class OpenProduct extends AppCompatActivity {
 
         String phone_source = "<b>  Sellers phone:  </b>" + phone;
         tv_phone.setText(Html.fromHtml(phone_source));
+    }
+
+    public void checkout(View aView) {
+        Intent intent = new Intent(this, CheckoutPage.class);
+        startActivity(intent);
     }
 }

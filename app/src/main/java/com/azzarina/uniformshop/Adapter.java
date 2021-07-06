@@ -37,8 +37,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
         productsFull = new ArrayList<>(products);
         }
 
-
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -50,9 +48,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         //bind the data
-        /*holder.productTitle.setText(products.get(position).getTitle());*/
-        /*holder.productPrice.setText("$" + (products.get(position).getPrice()));
-        holder.productSize.setText("Size " + (products.get(position).getSize()));*/
+        holder.productTitle.setText(products.get(position).getTitle());
+        holder.productPrice.setText("$" + (products.get(position).getPrice()));
+        holder.productSize.setText("Size " + (products.get(position).getSize()));
         Picasso.get().load(products.get(position).getCoverImage()).into(holder.productCoverImage);
     }
 
@@ -69,8 +67,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
             super(itemView);
 
             productTitle = itemView.findViewById(R.id.productTitle_detail);
-           /* productPrice = itemView.findViewById(R.id.productPrice_detail);
-            productSize = itemView.findViewById(R.id.productSize_detail);*/
+            productPrice = itemView.findViewById(R.id.productPrice_detail);
+            productSize = itemView.findViewById(R.id.productSize_detail);
             productCoverImage = itemView.findViewById(R.id.coverImage_detail);
 
             itemView.setOnClickListener(new View.OnClickListener() {

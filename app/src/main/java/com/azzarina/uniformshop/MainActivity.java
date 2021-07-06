@@ -9,6 +9,9 @@ import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SearchView;
@@ -30,7 +33,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, uniformGuide.class);
         startActivity(intent);
     }
+
 }
 
 
