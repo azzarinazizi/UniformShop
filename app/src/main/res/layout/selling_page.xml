@@ -89,8 +89,6 @@
 
             <Spinner
                 android:id="@+id/category_spinner"
-                android:spinnerMode="dialog"
-                android:prompt="@string/hint_resource"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:entries="@array/category_array"
@@ -155,27 +153,26 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Set Price"
-                android:textStyle="bold" />
 
-
-            <EditText
-                android:id="@+id/setPrice"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_price"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:ems="8"
-                android:hint="$"
-                android:inputType="number"
-                android:text="@string/price_set"
-                android:paddingHorizontal="9dp" />
+                android:paddingHorizontal="10dp"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DBDBD5"
+                    android:hint="Set Price"
+                    android:inputType="number"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
         </LinearLayout>
 
@@ -185,27 +182,26 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="7dp"
-                android:text="@string/description_text"
-                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/extraDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:maxLength="10"
-                android:hint="Max. 150 characters"
-                android:layout_marginLeft="15dp"
-                android:ems="13"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:paddingHorizontal="9dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                android:paddingHorizontal="10dp"
+                app:counterMaxLength="150">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/extraDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DBDBD5"
+                    android:hint="Extra Description (optional)"
+                    android:inputType="text"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -254,7 +250,26 @@
                 android:layout_marginRight="10dp"
                 android:text="@string/contactinstruction" />
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="10dp"
+
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DBDBD5"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<EditText
                 android:id="@+id/EmailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -264,9 +279,30 @@
                 android:layout_marginRight="10dp"
                 android:hint="Email"
                 android:ems="10"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress" />-->
 
-            <EditText
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                android:paddingHorizontal="10dp"
+                android:paddingBottom="10dp"
+                app:counterMaxLength="10"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DBDBD5"
+                    android:hint="Phone"
+                    android:inputType="phone"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<EditText
                 android:id="@+id/editTextPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -276,7 +312,7 @@
                 android:layout_marginRight="10dp"
                 android:hint="Phone"
                 android:ems="10"
-                android:inputType="phone" />
+                android:inputType="phone" />-->
 
         </LinearLayout>
 

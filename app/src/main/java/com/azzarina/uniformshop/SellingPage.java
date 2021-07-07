@@ -24,8 +24,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.textfield.TextInputLayout;
 
 public class SellingPage extends AppCompatActivity implements View.OnClickListener {
+
+    private TextInputLayout textInputEmail;
+    private TextInputLayout textInputPhone;
+    private TextInputLayout textInputDescription;
+    private TextInputLayout textInputPrice;
+    private RadioGroup selectedButton;
+    private Spinner categorySpinner;
+    private Spinner sizeSpinner;
+    private Spinner conditionSpinner;
 
     Spinner spinner;
     Button btnSelectImage;
@@ -33,7 +45,6 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
     RadioGroup radioGroup;
     RadioButton radioButton;
     TextView textView;
-    String filePathString = null;
 
     static final int SELECT_IMAGE = 1000;
     public static final String EXTRA_MESSAGE = "Set Price";
@@ -46,6 +57,15 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.selling_page);
 
+        textInputEmail = findViewById(R.id.text_input_email);
+        textInputPhone = findViewById(R.id.text_input_phone);
+        textInputDescription = findViewById(R.id.text_input_desc);
+        textInputPrice = findViewById(R.id.text_input_price);
+        selectedButton = findViewById(R.id.radioGroup);
+        categorySpinner = findViewById(R.id.category_spinner);
+        sizeSpinner = findViewById(R.id.size_spinner);
+        conditionSpinner = findViewById(R.id.condition_spinner);
+
         spinner = (Spinner) findViewById(R.id.category_spinner);
         btnSelectImage = findViewById(R.id.btnSelectImage);
         imgView = findViewById(R.id.imgView);
@@ -55,11 +75,98 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
 
     }
 
+    private boolean validateEmail(){
+        String emailInput = textInputEmail.getEditText().getText().toString().trim();
 
+        if (emailInput.isEmpty()){
+            textInputEmail.setError("Field can't be empty");
+            return false;
+        } else {
+            textInputEmail.setError(null);
+            /*textInputEmail.setErrorEnabled(false);*/
+            return true;
+        }
+    }
+
+    private boolean validatePhone(){
+        String phoneInput = textInputPhone.getEditText().getText().toString().trim();
+
+        if (phoneInput.isEmpty()){
+            textInputPhone.setError("Field can't be empty");
+            return false;
+        } else if (phoneInput.length() > 10){
+            textInputPhone.setError("Phone too long");
+            return false;
+        } else {
+            textInputPhone.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validatePrice(){
+        String priceInput = textInputPrice.getEditText().getText().toString().trim();
+
+        if (priceInput.isEmpty()){
+            textInputPrice.setError("Field can't be empty");
+            return false;
+        } else {
+            textInputPrice.setError(null);
+            /*textInputEmail.setErrorEnabled(false);*/
+            return true;
+        }
+    }
+
+    private boolean validateDescription(){
+        String descriptionInput = textInputDescription.getEditText().getText().toString().trim();
+
+        if (descriptionInput.length() > 150){
+            textInputDescription.setError("Description too long");
+            return false;
+        } else {
+            textInputDescription.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateLevel() {
+
+        if (selectedButton.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(getApplicationContext(), "Please select a level", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateCategory() {
+        if (categorySpinner.getSelectedItem().toString().trim().equals("Select One")) {
+            Toast.makeText(getApplicationContext(), "Please select a category", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateSize() {
+        if (sizeSpinner.getSelectedItem().toString().trim().equals("Select One")) {
+            Toast.makeText(getApplicationContext(), "Please select a size", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validateCondition() {
+        if (conditionSpinner.getSelectedItem().toString().trim().equals("Select One")) {
+            Toast.makeText(getApplicationContext(), "Please enter the condition of your product", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
+    }
 
     public void listing_overview (View aView) {
+        if (!validateEmail() | !validatePhone() | !validateDescription() | !validatePrice() | !validateLevel() | !validateCategory() | !validateSize() | !validateCondition()){
+            return;
+        }
 
-        Intent i = new Intent(this,listing_overview.class);
+        { Intent i = new Intent(this,listing_overview.class);
 
         EditText et_price = (EditText) findViewById(R.id.setPrice);
         EditText et_desc = (EditText) findViewById(R.id.extraDescription);
@@ -67,8 +174,8 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         Spinner sp_category = (Spinner) findViewById(R.id.category_spinner);
         Spinner sp_size = (Spinner) findViewById(R.id.size_spinner);
         Spinner sp_condition = (Spinner) findViewById(R.id.condition_spinner);
-        EditText et_email = (EditText) findViewById(R.id.EmailAddress);
-        EditText et_phone = (EditText) findViewById(R.id.editTextPhone);
+        EditText et_email = (EditText) findViewById(R.id.email);
+        EditText et_phone = (EditText) findViewById(R.id.phone);
 
         String price = et_price.getText().toString();
         String desc = et_desc.getText().toString();
@@ -88,7 +195,7 @@ public class SellingPage extends AppCompatActivity implements View.OnClickListen
         i.putExtra("email", email);
         i.putExtra("phone", phone);
 
-        startActivity(i);
+        startActivity(i);}
 
     }
 

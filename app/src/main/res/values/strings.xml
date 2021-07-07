@@ -45,6 +45,7 @@
     </string-array>
 
     <string-array name="category_array">
+        <item>Select One</item>
         <item>Girls 3/4 Sleeve Blouse</item>
         <item>Girls Long Sleeve Blouse</item>
         <item>Boys Short Sleeve Shirt</item>
