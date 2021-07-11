@@ -10,7 +10,9 @@ import android.widget.TextView;
 
 import static java.lang.String.format;
 
-public class listing_overview extends AppCompatActivity {
+public class  ListingOverview extends AppCompatActivity {
+
+    // Set attributes as strings before fetching data from database
 
     String price;
     String description;
@@ -27,7 +29,10 @@ public class listing_overview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listing_overview);
 
+        // Get data of each specification from database using the object name in the database
+
         Intent i = getIntent();
+
         price = i.getStringExtra("price");
         description = i.getStringExtra("description");
         checked = i.getStringExtra("checked");
@@ -37,23 +42,28 @@ public class listing_overview extends AppCompatActivity {
         email = i.getStringExtra("email");
         phone = i.getStringExtra("phone");
 
+        // Match data to its placement in the xml layout
+
         TextView tv_price = (TextView) findViewById(R.id.price);
         TextView tv_description = (TextView) findViewById(R.id.extradesc);
-        TextView tv_listinghdg = (TextView) findViewById(R.id.listing_hdg);
+        TextView tv_listing_hdg = (TextView) findViewById(R.id.listing_hdg);
         TextView tv_size = (TextView) findViewById(R.id.size);
         TextView tv_condition = (TextView) findViewById(R.id.condition);
         TextView tv_email = (TextView) findViewById(R.id.email);
         TextView tv_phone = (TextView) findViewById(R.id.phone);
 
+        // Set text of the data in xml layout
+
         tv_price.setText(format("$%s", price));
         tv_description.setText(description);
-        tv_listinghdg.setText(String.format("%s %s", checked, category));
+        tv_listing_hdg.setText(String.format("%s %s", checked, category));
         tv_size.setText(size);
         tv_condition.setText(condition);
         tv_email.setText(email);
         tv_phone.setText(phone);
     }
 
+    // 'Return to home' button on click
     public void home (View aView) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- Card view of products displaying using recycler view!-->
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="1dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="4dp"
     app:cardElevation="8dp">
 
@@ -14,57 +15,60 @@
         android:layout_height="match_parent"
         android:layout_margin="0dp">
 
+        <!-- Product Image !-->
         <ImageView
             android:id="@+id/coverImage_detail"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:padding="2dp" />
 
+        <!-- Product Title !-->
         <TextView
             android:id="@+id/productTitle_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Product Title"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
             android:fontFamily="@font/nunito"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/coverImage_detail"
-            android:layout_toRightOf="@+id/coverImage_detail"
-            android:text="Product Title"
-            android:textColor="#000"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:layout_toRightOf="@+id/coverImage_detail" />
 
+        <!-- Product price !-->
         <TextView
             android:id="@+id/productPrice_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Price"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:fontFamily="@font/nunito"
             android:layout_below="@+id/productTitle_detail"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/nunito"
             android:layout_toEndOf="@+id/coverImage_detail"
-            android:layout_toRightOf="@+id/coverImage_detail"
-            android:text="Price"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            android:layout_toRightOf="@+id/coverImage_detail"/>
 
+        <!-- Product Size !-->
         <TextView
             android:id="@+id/productSize_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Size"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:fontFamily="@font/nunito"
             android:layout_below="@+id/productPrice_detail"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="2dp"
-            android:fontFamily="@font/nunito"
             android:layout_toEndOf="@+id/coverImage_detail"
-            android:layout_toRightOf="@+id/coverImage_detail"
-            android:text="Size"
-            android:textColor="#000"
-            android:textSize="15sp" />
-
+            android:layout_toRightOf="@+id/coverImage_detail"/>
 
     </RelativeLayout>
 

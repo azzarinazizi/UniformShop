@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class uniformGuide extends AppCompatActivity {
+// This component is simply just a component with informative text hence why no functions are called
+
+public class UniformGuide extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,7 @@
 package com.azzarina.uniformshop;
 
 public class Product {
+    // Set objects as strings
     private String title;
     private String price;
     private String size;
@@ -9,6 +10,7 @@ public class Product {
     private String email;
     private String phone;
 
+    // Create array list for products
     public Product (){}
     public Product (String title, String price, String size, String coverImage){
         this.title = title;
@@ -19,6 +21,8 @@ public class Product {
         this.email = email;
         this.phone = phone;
     }
+
+    // Generate getter and setter from databse to array list
 
     public String getTitle() {
         return title;

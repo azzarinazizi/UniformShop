@@ -4,42 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".listing_overview"
+    tools:context=".ListingOverview"
     android:background="#DBDBD5">
 
+    <!--Listing Successful Heading!-->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/listingSuccessful"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/nunito"
         android:text="@string/successful_listing"
+        android:fontFamily="@font/nunito"
         android:textSize="28dp"
         android:textStyle="bold"
         android:textColor="#000000"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--Main Linear layout that holds multiple linear layouts of the specs!-->
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@drawable/borderblack"
         android:orientation="vertical"
+        android:background="@drawable/border_black"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="10dp"
         android:paddingHorizontal="20dp"
         android:paddingVertical="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/listingSuccessful">
 
-
+        <!--Linear layout for listing heading / title!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,31 +48,31 @@
                 android:id="@+id/listing_hdg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
                 android:fontFamily="@font/nunito"
                 android:textSize="22dp"
-                android:textStyle="bold" />
-
+                android:textStyle="bold"
+                android:paddingBottom="10dp"/>
         </LinearLayout>
 
-
-
+        <!--Linear layout for listing price-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Price heading !-->
             <TextView
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
                 android:text="Price"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/nunito"
+                android:background="#CCCBCB"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"/>
 
+            <!-- Price input !-->
             <TextView
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
@@ -81,25 +80,27 @@
                 android:paddingLeft="10dp"
                 tools:layout_editor_absoluteX="77dp"
                 tools:layout_editor_absoluteY="215dp" />
-
         </LinearLayout>
 
+        <!--Linear layout for listing size!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Size heading !-->
             <TextView
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:text="Size"
+                android:textStyle="bold"
                 android:fontFamily="@font/nunito"
                 android:background="#CCCBCB"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Size"
-                android:textStyle="bold" />
+                android:paddingVertical="5dp"/>
 
+            <!-- Size input !-->
             <TextView
                 android:id="@+id/size"
                 android:layout_width="wrap_content"
@@ -109,22 +110,25 @@
                 tools:layout_editor_absoluteY="215dp" />
         </LinearLayout>
 
+        <!--Linear layout for listing condition!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Condition heading !-->
             <TextView
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:text="Condition"
+                android:textStyle="bold"
                 android:background="#CCCBCB"
                 android:fontFamily="@font/nunito"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Condition"
-                android:textStyle="bold" />
+                android:paddingVertical="5dp"/>
 
+            <!-- Condition input !-->
             <TextView
                 android:id="@+id/condition"
                 android:layout_width="wrap_content"
@@ -134,22 +138,25 @@
                 tools:layout_editor_absoluteY="215dp" />
         </LinearLayout>
 
+        <!--Linear layout for listing description!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Extra Description heading !-->
             <TextView
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
+                android:text="@string/description_text"
+                android:textStyle="bold"
                 android:background="#CCCBCB"
                 android:fontFamily="@font/nunito"
                 android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="@string/description_text"
-                android:textStyle="bold" />
+                android:paddingVertical="5dp"/>
 
+            <!-- Extra Description input !-->
             <TextView
                 android:id="@+id/extradesc"
                 android:layout_width="wrap_content"
@@ -157,94 +164,100 @@
                 android:paddingLeft="10dp"
                 tools:layout_editor_absoluteX="77dp"
                 tools:layout_editor_absoluteY="215dp" />
-
         </LinearLayout>
 
+        <!--Linear layout for Sellers contact info heading!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Seller's Contact Information heading !-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_semibold"
-                android:paddingHorizontal="5dp"
-                android:paddingVertical="5dp"
                 android:text="@string/sellerscontactinfo"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="5dp"/>
         </LinearLayout>
 
+        <!--Linear layout for sellers email!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
 
+            <!-- Email heading !-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textStyle="bold"
                 android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:text="Email: "
-                android:textStyle="bold" />
+                android:paddingHorizontal="15dp"/>
 
+            <!-- Email input !-->
             <TextView
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="3dp"
                 android:fontFamily="@font/nunito_italic"
+                android:paddingLeft="3dp"
                 tools:layout_editor_absoluteX="77dp"
                 tools:layout_editor_absoluteY="215dp" />
-
         </LinearLayout>
 
+        <!--Linear layout for sellers phone number!-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
 
+            <!-- Phone heading !-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="15dp"
-                android:text="Phone: "
+                android:text="@string/phone"
                 android:fontFamily="@font/nunito"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:paddingHorizontal="15dp" />
 
+            <!-- Phone number input !-->
             <TextView
                 android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="3dp"
                 android:fontFamily="@font/nunito_italic"
+                android:paddingLeft="3dp"
                 tools:layout_editor_absoluteX="77dp"
                 tools:layout_editor_absoluteY="215dp" />
-
         </LinearLayout>
 
     </LinearLayout>
 
+    <!--'RETURN TO HOME' button-->
     <Button
         android:id="@+id/button"
         android:layout_width="180dp"
         android:layout_height="40dp"
-        android:layout_marginTop="48dp"
-        android:background="@drawable/roundedcorner2"
-        android:fontFamily="@font/msyi"
-        android:onClick="home"
         android:text="@string/return_home"
+        android:fontFamily="@font/msyi"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
+        android:background="@drawable/rounded_corner_1"
         app:backgroundTint="@null"
+        android:onClick="home"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

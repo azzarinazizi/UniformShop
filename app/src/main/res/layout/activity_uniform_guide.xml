@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uniformGuide"
+    tools:context=".UniformGuide"
     android:background="#DBDBD5">
 
-
+    <!-- Scroll view containing one Linear layout which contains multiple linear layouts !-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,11 +19,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Main vertical Linear layout container that contains multiple linear layout  !-->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
             android:orientation="vertical">
 
+            <!-- Image header !-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/header002" />
+            </LinearLayout>
+
+            <!-- Junior uniform heading !-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -34,18 +49,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/junior_uniform_hdg"
                     android:textColor="#000000"
                     android:fontFamily="@font/antic"
-                    android:textSize="25dp"
-                    android:text="@string/junior_uniform_hdg" />
+                    android:textSize="25dp"/>
             </LinearLayout>
 
+            <!-- Linear layout all of Junior uniform guide !-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
+                <!-- Junior Shorts !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -55,23 +71,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shorts:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Regulation polyester/wool, navy shorts. "
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="Regulation polyester/wool, navy shorts. " />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Skirt !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -82,23 +99,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Skirt:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/skirt_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/skirt_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Trousers !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -109,23 +127,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Trousers:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/trousers_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/trousers_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Jersey !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -136,23 +155,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Jersey:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/jersey_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/jersey_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Shirt !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -163,23 +183,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shirt:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/shirt_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/shirt_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior T-shirt / singlet !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -190,22 +211,23 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
+                        android:text="@string/tshirt_singlet_hdg"
                         android:fontFamily="@font/nunito"
+                        android:textColor="#DBDBD5"
+                        android:background="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/tshirt_singlet_hdg" />
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/tshirtsinglet_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/tshirtsinglet_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Shoes !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -216,23 +238,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shoes:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#1C3D5D"
+                        android:text="@string/shoes_desc"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/shoes_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Junior Socks / tights !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -243,23 +266,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Socks / Tights:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/socks_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/socks_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Junior jacket !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -270,23 +294,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
+                        android:text="Jacket:"
+                        android:textStyle="bold"
                         android:textColor="#DBDBD5"
                         android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="Jacket:"
-                        android:textStyle="bold" />
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/jacket_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/jacket_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- PE shirt !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -297,23 +322,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="PE Shirt:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/PEshirt_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/PEshirt_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- PE Shorts !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -324,25 +350,39 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
+                        android:text="PE Shorts:"
+                        android:textStyle="bold"
                         android:textColor="#DBDBD5"
                         android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="PE Shorts:"
-                        android:textStyle="bold" />
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/PEshorts_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/PEshorts_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
             </LinearLayout>
 
+            <!-- Senior image header !-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="115dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/header001" />
+            </LinearLayout>
+
+            <!-- Senior Uniform heading / title !-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -353,17 +393,19 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#000000"
+                    android:text="@string/senior_uniform_hdg"
                     android:fontFamily="@font/antic"
                     android:textSize="25dp"
-                    android:text="@string/senior_uniform_hdg" />
+                    android:textColor="#000000"/>
             </LinearLayout>
 
+            <!-- Vertical Linear layout for senior uniform guide !-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!-- Senior Shorts !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -373,23 +415,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shorts:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="Regulation polyester/wool, navy shorts. "
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="Regulation polyester/wool, navy shorts. " />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Senior Skirt !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -400,23 +443,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Skirt:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/skirt_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/skirt_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Senior Trousers !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -427,23 +471,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Trousers:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/trousers_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/trousers_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Senior Jersey !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -454,23 +499,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Jersey:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/redjersey_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/redjersey_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Senior Shirt !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -481,23 +527,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shirt:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/seniorshirt_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/seniorshirt_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Senior T-shirt / singlet !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -508,22 +555,23 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
+                        android:text="@string/tshirt_singlet_hdg"
                         android:textColor="#DBDBD5"
                         android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/tshirt_singlet_hdg" />
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/tshirtsinglet_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/tshirtsinglet_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Senior Shoes !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -534,23 +582,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Shoes:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/shoes_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/shoes_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Senior socks / tights !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -561,23 +610,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Socks / Tights:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/socks_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/socks_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Senior Jacket !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -588,23 +638,24 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
-                        android:textColor="#DBDBD5"
-                        android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
                         android:text="Jacket:"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="#DBDBD5"
+                        android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp"
+                        android:paddingLeft="6dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/jacket_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/jacket_desc" />
+                        android:paddingLeft="6dp" />
                 </LinearLayout>
 
+                <!-- Senior Blazer !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -615,22 +666,23 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
+                        android:paddingLeft="6dp"
+                        android:text="@string/blazer_hdg"
                         android:textColor="#DBDBD5"
                         android:fontFamily="@font/nunito"
-                        android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/blazer_hdg" />
+                        android:background="#1C3D5D"
+                        android:paddingVertical="5dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/blazer_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/blazer_desc" />
+                        android:paddingLeft="6dp"/>
                 </LinearLayout>
 
+                <!-- Senior tie !-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -642,21 +694,20 @@
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="match_parent"
-                        android:background="#1C3D5D"
+                        android:text="@string/ties_hdg"
                         android:textColor="#DBDBD5"
                         android:fontFamily="@font/nunito"
+                        android:background="#1C3D5D"
                         android:paddingVertical="5dp"
-                        android:paddingLeft="6dp"
-                        android:text="@string/ties_hdg" />
-
+                        android:paddingLeft="6dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:text="@string/tie_desc"
                         android:textColor="#1C3D5D"
                         android:paddingVertical="5dp"
                         android:paddingLeft="6dp"
-                        android:paddingBottom="20dp"
-                        android:text="@string/tie_desc" />
+                        android:paddingBottom="20dp" />
                 </LinearLayout>
 
             </LinearLayout>

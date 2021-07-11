@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:layout_margin="0dp">
 
+    <!-- Scroll View container that holds a linear layout of the specs !-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,121 +13,133 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="334dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/coverImage_detail"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginVertical="20dp"
-            android:layout_gravity="center"/>
-
-        <TextView
-            android:id="@+id/productTitle_detail"
-            android:layout_width="wrap_content"
+        <!-- Vertical linear layout of the product specifications imported from JSON database !-->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:text="Product Title"
-            android:textColor="#000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:layout_marginBottom="334dp">
 
-        <TextView
-            android:id="@+id/productPrice_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:text="Price"
-            android:textColor="#000"
-            android:textSize="20dp" />
+            <!-- Product image !-->
+            <ImageView
+                android:id="@+id/coverImage_detail"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/productSize_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:text="Size"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            <!-- Product title !-->
+            <TextView
+                android:id="@+id/productTitle_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Title"
+                android:fontFamily="@font/nunito"
+                android:textColor="#000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="5dp"
-            android:src="@drawable/ic_line_small"/>
+            <!-- Product price !-->
+            <TextView
+                android:id="@+id/productPrice_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:fontFamily="@font/nunito"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/productDesc_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:text="Description"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            <!-- Product size !-->
+            <TextView
+                android:id="@+id/productSize_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:fontFamily="@font/nunito"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="5dp"
-            android:src="@drawable/ic_line_long"/>
+            <!-- Barrier line below 'Size' !-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_line_small"
+                android:layout_gravity="center"
+                android:layout_marginVertical="5dp" />
 
-        <TextView
-            android:id="@+id/email_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:textStyle="italic"
-            android:text="Sellers Email"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            <!-- Product description !-->
+            <TextView
+                android:id="@+id/productDesc_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:fontFamily="@font/nunito"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:paddingHorizontal="30dp"/>
 
-        <TextView
-            android:id="@+id/phone_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/nunito"
-            android:text="Sellers Phone"
-            android:textStyle="italic"
-            android:textColor="#000"
-            android:textSize="15sp" />
+            <!-- Barrier line below 'Description' !-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_line_long"
+                android:layout_gravity="center"
+                android:layout_marginVertical="5dp"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="5dp"
-            android:src="@drawable/ic_line_long"/>
+            <!-- Sellers email !-->
+            <TextView
+                android:id="@+id/email_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sellers Email"
+                android:fontFamily="@font/nunito"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_gravity="center" />
 
-        <Button
-            android:id="@+id/checkoutBtn"
-            android:onClick="checkout"
-            android:layout_width="180dp"
-            android:layout_height="35dp"
-            android:layout_marginVertical="20dp"
-            android:layout_gravity="center"
-            android:background="@drawable/roundedcorner2"
-            android:fontFamily="@font/msyi"
-            android:text="CHECKOUT"
-            android:textColor="#FFFFFF"
-            android:textSize="15dp"
-            app:backgroundTint="@null" />
+            <!-- Sellers phone number !-->
+            <TextView
+                android:id="@+id/phone_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sellers Phone"
+                android:fontFamily="@font/nunito"
+                android:textStyle="italic"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_gravity="center"/>
 
-    </LinearLayout>
+            <!-- Barrier line below phone number !-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_line_long"
+                android:layout_gravity="center"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- 'CHECKOUT' button !-->
+            <Button
+                android:id="@+id/checkoutBtn"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:text="CHECKOUT"
+                android:fontFamily="@font/msyi"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                android:background="@drawable/rounded_corner_1"
+                app:backgroundTint="@null"
+                android:onClick="checkout"
+                android:layout_marginVertical="20dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

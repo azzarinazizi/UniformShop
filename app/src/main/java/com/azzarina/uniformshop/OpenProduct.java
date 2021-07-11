@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,9 @@ public class OpenProduct extends AppCompatActivity {
         setContentView(R.layout.activity_open_product);
 
         Intent intent = getIntent();
+
+        // Get data from constants called in ProductsList.java
+
         String coverImage = intent.getStringExtra(EXTRA_IMAGE);
         String productTitle = intent.getStringExtra(EXTRA_TITLE);
         String productPrice = intent.getStringExtra(EXTRA_PRICE);
@@ -36,6 +40,8 @@ public class OpenProduct extends AppCompatActivity {
         String productDesc = intent.getStringExtra(EXTRA_DESC);
         String email = intent.getStringExtra(EXTRA_EMAIL);
         String phone = intent.getStringExtra(EXTRA_PHONE);
+
+        // Match data to its placement in the xml layout
 
         ImageView imageView = findViewById(R.id.coverImage_detail);
         TextView tv_title = findViewById(R.id.productTitle_detail);
@@ -45,7 +51,12 @@ public class OpenProduct extends AppCompatActivity {
         TextView tv_email = findViewById(R.id.email_detail);
         TextView tv_phone = findViewById(R.id.phone_detail);
 
+        // Set image from data in xml layout
+
         Picasso.get().load(coverImage).fit().centerInside().into(imageView);
+
+        // Set text of the data in xml layout
+
         tv_title.setText(productTitle);
         tv_price.setText("$" + productPrice);
         tv_size.setText("Size " + productSize);
@@ -58,6 +69,7 @@ public class OpenProduct extends AppCompatActivity {
         tv_phone.setText(Html.fromHtml(phone_source));
     }
 
+    // 'Checkout' button onclick
     public void checkout(View aView) {
         Intent intent = new Intent(this, CheckoutPage.class);
         startActivity(intent);

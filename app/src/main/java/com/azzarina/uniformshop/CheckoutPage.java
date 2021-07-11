@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+// This component is only the foundation layout created for future proofing / development
+
 public class CheckoutPage extends AppCompatActivity {
 
     @Override

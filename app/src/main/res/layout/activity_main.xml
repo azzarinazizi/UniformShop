@@ -8,11 +8,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Background image slideshow!-->
     <ImageView
         android:id="@+id/bg_slideshow"
-        android:src="@drawable/bg_slideshow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/bg_slideshow"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- Background navy blue gradient!-->
     <ImageView
         android:src="@drawable/gradient"
         android:layout_width="wrap_content"
@@ -31,38 +33,38 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 'BUY' button!-->
     <Button
         android:id="@+id/buyButton"
         android:layout_width="320dp"
         android:layout_height="60dp"
-        android:layout_marginLeft="2px"
-        android:layout_marginRight="4px"
-        android:layout_marginBottom="172dp"
-        android:onClick="product_list"
         android:text="@string/buyButton_text"
         android:fontFamily="@font/msyi"
         android:textSize="32dp"
         android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_corner_1"
         app:backgroundTint="@null"
-        android:background="@drawable/roundedcorner2"
+        android:onClick="productList"
+        android:layout_marginBottom="172dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- 'SELL' button!-->
     <Button
         android:id="@+id/sellButton"
         android:layout_width="320dp"
         android:layout_height="60dp"
+        android:text="@string/sellButton_text"
+        android:fontFamily="@font/msyi"
+        android:textSize="32dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rounded_corner_1"
+        app:backgroundTint="@null"
+        android:onClick="sellingPage"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/roundedcorner2"
-        android:fontFamily="@font/msyi"
-        android:onClick="sendMessage"
-        android:text="@string/sellButton_text"
-        android:textColor="#FFFFFF"
-        android:textSize="32dp"
-        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -70,37 +72,54 @@
         app:layout_constraintTop_toBottomOf="@+id/buyButton"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- 'Uniform Guide' button!-->
     <TextView
         android:id="@+id/UniformGuide"
         android:layout_width="130dp"
         android:layout_height="36dp"
-        android:background="@drawable/underlinewhite2"
-        android:clickable="true"
-        android:fontFamily="@font/msyi"
-        android:onClick="sendMessage2"
         android:text="@string/uniformGuide"
-        android:textColor="#FFFFFF"
+        android:fontFamily="@font/msyi"
         android:textSize="25dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/underline_white"
+        android:clickable="true"
+        android:onClick="uniformGuide"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sellButton"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.227" />
 
+    <!-- Question mark icon!-->
+    <ImageView
+        android:id="@+id/help_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_help"
+        android:clickable="true"
+        android:onClick="uniformGuide"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toEndOf="@id/UniformGuide"
+        app:layout_constraintTop_toBottomOf="@+id/sellButton"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <!-- Search bar!-->
     <SearchView
         android:id="@+id/searchbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:queryHint="@string/searchbar_hint"
+        android:background="@drawable/rounded_corner_2"
+        android:iconifiedByDefault="false"
+        app:iconifiedByDefault="false"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:background="@drawable/roundedcorner3"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/searchbar_hint"
-        app:iconifiedByDefault="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/bg_slideshow" />

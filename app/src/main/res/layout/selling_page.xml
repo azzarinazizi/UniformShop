@@ -7,6 +7,7 @@
     tools:context=".SellingPage"
     android:background="#DBDBD5">
 
+    <!-- Scroll view containing one Linear layout which contains multiple linear layouts !-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,329 +19,309 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="vertical">
-
+        <!-- Main vertical Linear layout container that contains multiple linear layout  !-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Level"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/radioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/radio_senior"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:paddingHorizontal="3dp"
-                android:text="Senior" />
-
-            <RadioButton
-                android:id="@+id/radio_junior"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:paddingHorizontal="3dp"
-                android:text="Junior" />
-
-            </RadioGroup>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Category"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/category_spinner"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:entries="@array/category_array"
-                android:paddingHorizontal="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Size"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/size_spinner"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:entries="@array/size_array"
-                android:paddingHorizontal="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="110dp"
-                android:layout_height="wrap_content"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:text="Condition"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/condition_spinner"
-                android:layout_width="240dp"
-                android:layout_height="wrap_content"
-                android:entries="@array/condition_array"
-                android:paddingHorizontal="15dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/setPrice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#DBDBD5"
-                    android:hint="Set Price"
-                    android:inputType="number"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:counterEnabled="true"
-                android:paddingHorizontal="10dp"
-                app:counterMaxLength="150">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/extraDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#DBDBD5"
-                    android:hint="Extra Description (optional)"
-                    android:inputType="text"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="115dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/borderblack"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/imgView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="10dp"
-                android:layout_weight="0" />
-
-
-            <Button
-                android:id="@+id/btnSelectImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:background="@drawable/uploadimg"
-                android:fontFamily="@font/msyi"
-                app:backgroundTint="@null" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:background="@drawable/borderblack">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CCCBCB"
-                android:fontFamily="@font/nunito"
-                android:paddingHorizontal="12dp"
-                android:paddingVertical="7dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:text="@string/contactinstruction" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="10dp"
-                android:paddingTop="10dp"
-
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#DBDBD5"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!--<EditText
-                android:id="@+id/EmailAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="15dp"
-                android:paddingLeft="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:hint="Email"
-                android:ems="10"
-                android:inputType="textEmailAddress" />-->
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:counterEnabled="true"
-                android:paddingHorizontal="10dp"
-                android:paddingBottom="10dp"
-                app:counterMaxLength="10"
-                app:errorEnabled="true">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#DBDBD5"
-                    android:hint="Phone"
-                    android:inputType="phone"/>
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <!--<EditText
-                android:id="@+id/editTextPhone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingVertical="15dp"
-                android:paddingLeft="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:hint="Phone"
-                android:ems="10"
-                android:inputType="phone" />-->
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/uploadListing"
-                android:onClick="listing_overview"
-                android:layout_width="180dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:layout_gravity="center"
-                android:background="@drawable/roundedcorner2"
-                android:fontFamily="@font/msyi"
-                android:text="UPLOAD LISTING"
-                android:textColor="#FFFFFF"
-                android:textSize="15dp"
-                app:backgroundTint="@null"/>
+            <!-- Student level of uniform  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Level heading !-->
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Level"
+                    android:textStyle="bold"
+                    android:background="#CCCBCB"
+                    android:fontFamily="@font/nunito"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp" />
+
+                <!-- Student level radio group that holds the two radio buttons !-->
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Senior radio button  !-->
+                    <RadioButton
+                        android:id="@+id/radio_senior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Senior"
+                        android:layout_marginLeft="15dp"
+                        android:paddingHorizontal="3dp"/>
+
+                    <!-- Junior radio button  !-->
+                    <RadioButton
+                        android:id="@+id/radio_junior"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Junior"
+                        android:layout_marginLeft="15dp"
+                        android:paddingHorizontal="3dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Product category  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Category heading !-->
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito"
+                    android:background="#CCCBCB"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"/>
+
+                <!-- Category spinner  !-->
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/category_array"
+                    android:paddingHorizontal="15dp" />
+            </LinearLayout>
+
+            <!-- Product size  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Size heading  !-->
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Size"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito"
+                    android:background="#CCCBCB"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"/>
+
+                <!-- Size spinner  !-->
+                <Spinner
+                    android:id="@+id/size_spinner"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/size_array"
+                    android:paddingHorizontal="15dp" />
+            </LinearLayout>
+
+            <!-- Product condition  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Condition heading  !-->
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Condition"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito"
+                    android:background="#CCCBCB"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="5dp"/>
+
+                <!-- Condition spinner  !-->
+                <Spinner
+                    android:id="@+id/condition_spinner"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/condition_array"
+                    android:paddingHorizontal="15dp" />
+            </LinearLayout>
+
+            <!-- Set price for product  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <!-- Price Input Layout  !-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    app:errorEnabled="true">
+
+                    <!-- Price Input Edit Text  !-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/setPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Set Price"
+                        android:inputType="number"
+                        android:background="#DBDBD5"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Extra Description !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!-- Description Input Layout  !-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    android:paddingHorizontal="10dp"
+                    app:counterMaxLength="150">
+
+                    <!-- Description Input Edit Text !-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/extraDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Extra Description (optional)"
+                        android:inputType="text"
+                        android:background="#DBDBD5"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- Upload product image  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_black"
+                android:orientation="horizontal">
+
+                <!-- Image selected !-->
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="0" />
+
+                <!-- Button to upload image / open gallery  !-->
+                <Button
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:fontFamily="@font/msyi"
+                    android:background="@drawable/upload_img"
+                    app:backgroundTint="@null"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Sellers contact information  !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@drawable/border_black">
+
+                <!-- Contact Information heading !-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/contact_instruction"
+                    android:fontFamily="@font/nunito"
+                    android:background="#CCCBCB"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="10dp" />
+
+                <!-- Email Input Layout!-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="10dp"
+                    app:errorEnabled="true">
+
+                    <!-- Email Input Edit Text !-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+                        android:background="#DBDBD5"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Phone Input Layout  !-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/text_input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:counterEnabled="true"
+                    android:paddingHorizontal="10dp"
+                    android:paddingBottom="10dp"
+                    app:counterMaxLength="10"
+                    app:errorEnabled="true">
+
+                    <!-- Phone Input Edit text !-->
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:background="#DBDBD5"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- 'UPLOAD LISTING' button !-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/uploadListing"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:text="UPLOAD LISTING"
+                    android:fontFamily="@font/msyi"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:background="@drawable/rounded_corner_1"
+                    app:backgroundTint="@null"
+                    android:onClick="listing_overview"
+                    android:layout_marginVertical="30dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
 
         </LinearLayout>
-
-
-    </LinearLayout>
 
     </ScrollView>
 

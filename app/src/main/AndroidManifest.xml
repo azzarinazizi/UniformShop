@@ -10,23 +10,16 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniformShop">
         <activity android:name=".CheckoutPage"></activity>
         <activity android:name=".OpenProduct" />
         <activity android:name=".ProductsList" />
-        <activity android:name=".listing_overview" />
-        <activity android:name=".uniformGuide" />
-        <activity
-            android:name=".MainActivity3"
-            android:parentActivityName=".SellingPage">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SellingPage" />
-        </activity>
+        <activity android:name=".ListingOverview" />
+        <activity android:name=".UniformGuide" />
         <activity android:name=".SellingPage" />
         <activity android:name=".MainActivity">
             <intent-filter>

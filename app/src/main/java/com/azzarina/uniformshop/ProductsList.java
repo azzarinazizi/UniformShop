@@ -30,7 +30,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ProductsList extends AppCompatActivity implements Adapter.OnItemClickListener {
+public class
+ProductsList extends AppCompatActivity implements Adapter.OnItemClickListener {
+
+    // Set constants for objects in database
 
     public static final String EXTRA_IMAGE = "imageURL";
     public static final String EXTRA_TITLE = "name";
@@ -43,7 +46,11 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
     RecyclerView recyclerView;
     List<Product> products;
 
+    // Import JSON URL from gist online
+    // Set JSON database as string
+
     private static String JSON_URL = "https://gist.githubusercontent.com/azzarinazizi/3fff562d066a5936853334a401d0c437/raw/7a7527b5f86a11c445e4eda7e6df48475ba51a81/products";
+
     Adapter adapter;
 
     @Override
@@ -51,14 +58,15 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products_list);
 
+        // Match recyclerview with its id in the xml layout
         recyclerView = findViewById(R.id.productsList);
         products = new ArrayList<>();
 
         extractProducts();
-
     }
 
     private void extractProducts() {
+        // Set Volley as HTTP library used
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, JSON_URL, null, new Response.Listener<JSONArray>() {
             @Override
@@ -67,6 +75,7 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
                     try {
                         JSONObject productObject = response.getJSONObject(i);
 
+                        // Match data in database objects to elements
                         Product product = new Product();
                         product.setTitle(productObject.getString("name").toString());
                         product.setPrice(productObject.getString("price").toString());
@@ -81,7 +90,6 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
                 }
 
                 recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -89,6 +97,7 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
                 recyclerView.setAdapter(adapter);
                 adapter.setOnItemClickListener(ProductsList.this);
             }
+
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
@@ -97,10 +106,9 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
         });
 
         queue.add(jsonArrayRequest);
-
     }
 
-
+    // Search bar in top menu bar of app
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -123,6 +131,8 @@ public class ProductsList extends AppCompatActivity implements Adapter.OnItemCli
         return true;
     }
 
+    // When user clicks on product in card view
+    // Displays all details available in object from the database
     @Override
     public void onItemClick(int position) {
         Intent detailIntent = new Intent(this, OpenProduct.class);

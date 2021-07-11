@@ -6,78 +6,83 @@
     android:layout_height="match_parent"
     tools:context=".CheckoutPage">
 
+    <!--Page heading-->
     <TextView
-        android:id="@+id/checkout"
+        android:id="@+id/checkoutHeading"
+        android:text="CHECKOUT"
+        android:textStyle="bold"
         android:layout_width="374dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:gravity="center_vertical|center_horizontal"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="CHECKOUT"
-        android:textStyle="bold"
+        android:gravity="center_vertical|center_horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--CONTACT INFORMATION-->
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/contactInfo"
+        android:text="CONTACT INFORMATION"
+        android:background="@drawable/border_black"
         android:layout_width="374dp"
         android:layout_height="52dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/borderblack"
-        android:gravity="center_vertical"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="CONTACT INFORMATION"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkout" />
+        app:layout_constraintTop_toBottomOf="@+id/checkoutHeading" />
 
+    <!--SHIPPING ADDRESS-->
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/shippingAddress"
+        android:text="SHIPPING ADDRESS"
+        android:background="@drawable/border_black"
         android:layout_width="373dp"
         android:layout_height="120dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/borderblack"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="SHIPPING ADDRESS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/contactInfo" />
 
+    <!--PAYMENT OPTIONS-->
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/paymentOptions"
+        android:text="PAYMENT OPTIONS"
+        android:background="@drawable/border_black"
         android:layout_width="373dp"
         android:layout_height="170dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/borderblack"
         android:paddingHorizontal="10dp"
         android:paddingVertical="10dp"
-        android:text="PAYMENT OPTIONS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/shippingAddress" />
 
+    <!--Place Order Button-->
     <Button
         android:id="@+id/checkoutBtn"
+        android:text="PLACE ORDER"
+        android:fontFamily="@font/msyi"
+        android:textSize="15dp"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@null"
+        android:background="@drawable/rounded_corner_1"
         android:layout_width="180dp"
         android:layout_height="35dp"
-        android:layout_gravity="center"
         android:layout_marginVertical="20dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/roundedcorner2"
-        android:fontFamily="@font/msyi"
-        android:text="PLACE ORDER"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp"
-        app:backgroundTint="@null"
+        android:layout_gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/paymentOptions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
